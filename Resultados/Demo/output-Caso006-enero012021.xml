@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210104 11:05:25.984" rpa="false">
+<suite id="s1" name="AutomatizacionRobot" source="C:\Users\Owner\Documents\RobotFramework\TestCases\AutomatizacionRobot.robot">
+<test id="s1-t1" name="Precondiciones">
+<kw name="Configurar Directorio">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${CarpetasDeCaptura}</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:26.449" endtime="20210104 11:05:26.450"></status>
+</kw>
+<status status="PASS" starttime="20210104 11:05:26.447" endtime="20210104 11:05:26.451"></status>
+</kw>
+<kw name="Abrir Navegador">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://winstoncastillo.com/ejercicios/atoc.html</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210104 11:05:26.452" level="INFO">Opening browser 'chrome' to base url 'http://winstoncastillo.com/ejercicios/atoc.html'.</msg>
+<status status="PASS" starttime="20210104 11:05:26.452" endtime="20210104 11:05:31.749"></status>
+</kw>
+<status status="PASS" starttime="20210104 11:05:26.451" endtime="20210104 11:05:31.749"></status>
+</kw>
+<tags>
+<tag>Caso006</tag>
+<tag>Exploratoria</tag>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:26.446" endtime="20210104 11:05:31.750" critical="yes"></status>
+</test>
+<test id="s1-t2" name="001 Manejar Alertas">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id='hero']</arg>
+<arg>timeout=15s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:31.754" endtime="20210104 11:05:31.834"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[1]/button</arg>
+</arguments>
+<msg timestamp="20210104 11:05:31.836" level="INFO">Clicking button 'xpath=/html/body/div/section[3]/p[1]/button'.</msg>
+<status status="PASS" starttime="20210104 11:05:31.835" endtime="20210104 11:05:32.018"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<arguments>
+<arg>text=Ejemplo de Alerta</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:32.019" endtime="20210104 11:05:32.035"></status>
+</kw>
+<kw name="Alert Should Not Be Present" library="SeleniumLibrary">
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" starttime="20210104 11:05:32.036" endtime="20210104 11:05:32.546"></status>
+</kw>
+<tags>
+<tag>Caso001</tag>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:31.753" endtime="20210104 11:05:32.547" critical="yes"></status>
+</test>
+<test id="s1-t3" name="002 Asignar identificadores y hacer capturas de pantalla">
+<kw name="Assign Id To Element" library="SeleniumLibrary">
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]</arg>
+<arg>ContenedorCompleto</arg>
+</arguments>
+<msg timestamp="20210104 11:05:32.551" level="INFO">Assigning temporary id 'ContenedorCompleto' to element 'xpath=/html/body/div/section[3]'.</msg>
+<status status="PASS" starttime="20210104 11:05:32.551" endtime="20210104 11:05:32.595"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]</arg>
+<arg>timeout=15s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:32.595" endtime="20210104 11:05:32.646"></status>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<arguments>
+<arg>ContenedorCompleto</arg>
+<arg>filename=ContenedorCompleto-{index}.png</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.082" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/ContenedorCompleto-8.png"&gt;&lt;img src="Screenshot/ContenedorCompleto-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210104 11:05:32.647" endtime="20210104 11:05:33.083"></status>
+</kw>
+<kw name="Assign Id To Element" library="SeleniumLibrary">
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="caso002A"]</arg>
+<arg>RecuadroCasoDos</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.084" level="INFO">Assigning temporary id 'RecuadroCasoDos' to element 'xpath=//*[@id="caso002A"]'.</msg>
+<status status="PASS" starttime="20210104 11:05:33.083" endtime="20210104 11:05:33.134"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="caso002A"]</arg>
+<arg>timeout=15s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:33.135" endtime="20210104 11:05:33.175"></status>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<arguments>
+<arg>RecuadroCasoDos</arg>
+<arg>filename=RecuadroCasoDos-{index}.png</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.540" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/RecuadroCasoDos-8.png"&gt;&lt;img src="Screenshot/RecuadroCasoDos-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210104 11:05:33.175" endtime="20210104 11:05:33.540"></status>
+</kw>
+<tags>
+<tag>Exploratoria</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:32.550" endtime="20210104 11:05:33.541" critical="yes"></status>
+</test>
+<test id="s1-t4" name="003 Hacer clicks sobre diferentes elementos de la pagina">
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/label[1]/input</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.546" level="INFO">Verifying checkbox 'xpath=/html/body/div/section[3]/p[3]/label[1]/input' is selected.</msg>
+<status status="PASS" starttime="20210104 11:05:33.546" endtime="20210104 11:05:33.636"></status>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/label[2]/input</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.637" level="INFO">Verifying checkbox 'xpath=/html/body/div/section[3]/p[3]/label[2]/input' is not selected.</msg>
+<status status="PASS" starttime="20210104 11:05:33.637" endtime="20210104 11:05:33.738"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/input[1]</arg>
+<arg>C://Users/Owner/Desktop/Imagenes de Prueba/Objetos/2000359278431_2.jpg</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.740" level="INFO">Sending C:\Users\Owner\Desktop\Imagenes de Prueba\Objetos\2000359278431_2.jpg to browser.</msg>
+<status status="PASS" starttime="20210104 11:05:33.739" endtime="20210104 11:05:33.853"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/input[2]</arg>
+<arg>Texto de prueba</arg>
+</arguments>
+<msg timestamp="20210104 11:05:33.854" level="INFO">Typing text 'Texto de prueba' into text field 'xpath=/html/body/div/section[3]/p[3]/input[2]'.</msg>
+<status status="PASS" starttime="20210104 11:05:33.853" endtime="20210104 11:05:34.167"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/input[2]</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:34.167" endtime="20210104 11:05:34.224"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/input[3]</arg>
+</arguments>
+<msg timestamp="20210104 11:05:34.225" level="INFO">Clicking button 'xpath=/html/body/div/section[3]/p[3]/input[3]'.</msg>
+<status status="PASS" starttime="20210104 11:05:34.225" endtime="20210104 11:05:34.400"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[3]/p[3]/a</arg>
+</arguments>
+<msg timestamp="20210104 11:05:34.402" level="INFO">Clicking link 'xpath=/html/body/div/section[3]/p[3]/a'.</msg>
+<status status="PASS" starttime="20210104 11:05:34.401" endtime="20210104 11:05:34.628"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=http://winstoncastillo.com/</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:34.640" endtime="20210104 11:05:39.732"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20210104 11:05:39.743" endtime="20210104 11:05:40.189"></status>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<doc>Switches to browser window matching ``locator``.</doc>
+<arguments>
+<arg>url=http://winstoncastillo.com/ejercicios/atoc.html</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:40.191" endtime="20210104 11:05:40.312"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[1]</arg>
+<arg>timeout=15s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:40.313" endtime="20210104 11:05:40.384"></status>
+</kw>
+<tags>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:33.544" endtime="20210104 11:05:40.385" critical="yes"></status>
+</test>
+<test id="s1-t5" name="004 HAcer Doble click en ventana Popup">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[1]/button</arg>
+</arguments>
+<msg timestamp="20210104 11:05:40.390" level="INFO">Double clicking element 'xpath=/html/body/div/section[4]/p[1]/button'.</msg>
+<status status="PASS" starttime="20210104 11:05:40.389" endtime="20210104 11:05:40.754"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/section[4]/div/div/div/div[1]/h5</arg>
+<arg>timeout=3s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:40.755" endtime="20210104 11:05:41.076"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/section[4]/div/div/div/div[3]/button</arg>
+<arg>type</arg>
+<arg>button</arg>
+</arguments>
+<msg timestamp="20210104 11:05:41.152" level="INFO">Element 'xpath=/html/body/div[1]/section[4]/div/div/div/div[3]/button' attribute 'type' contains value 'button'.</msg>
+<status status="PASS" starttime="20210104 11:05:41.080" endtime="20210104 11:05:41.152"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/section[4]/div/div/div/div[1]/button/span</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:41.153" endtime="20210104 11:05:41.227"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/section[4]/div/div/div/div[1]/button/span</arg>
+</arguments>
+<msg timestamp="20210104 11:05:41.228" level="INFO">Double clicking element 'xpath=/html/body/div[1]/section[4]/div/div/div/div[1]/button/span'.</msg>
+<status status="PASS" starttime="20210104 11:05:41.228" endtime="20210104 11:05:41.555"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/section[4]/div/div/div/div[1]/button/span</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:41.555" endtime="20210104 11:05:41.853"></status>
+</kw>
+<tags>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:40.387" endtime="20210104 11:05:41.853" critical="yes"></status>
+</test>
+<test id="s1-t6" name="005 Verificar elementos dentor del UI">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[3]/button[1]</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:41.857" endtime="20210104 11:05:41.915"></status>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<arguments>
+<arg>id=elementoInactivo</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:41.916" endtime="20210104 11:05:41.987"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=elementoInactivo</arg>
+</arguments>
+<msg timestamp="20210104 11:05:41.989" level="INFO">Clicking element 'id=elementoInactivo'.</msg>
+<status status="PASS" starttime="20210104 11:05:41.988" endtime="20210104 11:05:42.129"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>id=elementoActivo</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:42.130" endtime="20210104 11:05:42.231"></status>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=elementoActivo</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:42.231" endtime="20210104 11:05:42.274"></status>
+</kw>
+<kw name="Element Should Be Focused" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is focused.</doc>
+<arguments>
+<arg>id=elementoActivo</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:42.276" endtime="20210104 11:05:42.311"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[3]/i</arg>
+</arguments>
+<msg timestamp="20210104 11:05:42.387" level="INFO">Element 'xpath=/html/body/div/section[4]/p[3]/i' is displayed.</msg>
+<status status="PASS" starttime="20210104 11:05:42.313" endtime="20210104 11:05:42.387"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="anotherBtn"]</arg>
+</arguments>
+<msg timestamp="20210104 11:05:42.388" level="INFO">Clicking button 'xpath=//*[@id="anotherBtn"]'.</msg>
+<status status="PASS" starttime="20210104 11:05:42.388" endtime="20210104 11:05:42.608"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[3]/i</arg>
+</arguments>
+<msg timestamp="20210104 11:05:42.653" level="INFO">Element 'xpath=/html/body/div/section[4]/p[3]/i' exists but is not displayed.</msg>
+<status status="PASS" starttime="20210104 11:05:42.609" endtime="20210104 11:05:42.653"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="btn"]</arg>
+</arguments>
+<msg timestamp="20210104 11:05:42.654" level="INFO">Clicking button '//*[@id="btn"]'.</msg>
+<status status="PASS" starttime="20210104 11:05:42.654" endtime="20210104 11:05:42.873"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[3]/i</arg>
+</arguments>
+<msg timestamp="20210104 11:05:42.921" level="INFO">Element 'xpath=/html/body/div/section[4]/p[3]/i' is displayed.</msg>
+<status status="PASS" starttime="20210104 11:05:42.875" endtime="20210104 11:05:42.922"></status>
+</kw>
+<tags>
+<tag>Caso005</tag>
+<tag>Exploratoria</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:41.855" endtime="20210104 11:05:42.923" critical="yes"></status>
+</test>
+<test id="s1-t7" name="006 Verificar Textos en el UI">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=elementoCorrecto</arg>
+</arguments>
+<status status="PASS" starttime="20210104 11:05:42.928" endtime="20210104 11:05:42.989"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[4]</arg>
+<arg>uiero verificar</arg>
+</arguments>
+<msg timestamp="20210104 11:05:43.079" level="INFO">Element 'xpath=/html/body/div/section[4]/p[4]' contains text 'uiero verificar'.</msg>
+<status status="PASS" starttime="20210104 11:05:42.991" endtime="20210104 11:05:43.079"></status>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[4]</arg>
+<arg>Texto no exacto</arg>
+</arguments>
+<msg timestamp="20210104 11:05:43.121" level="INFO">Element 'xpath=/html/body/div/section[4]/p[4]' does not contain text 'Texto no exacto'.</msg>
+<status status="PASS" starttime="20210104 11:05:43.080" endtime="20210104 11:05:43.121"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[4]</arg>
+<arg>Texto Exacto</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<msg timestamp="20210104 11:05:43.163" level="INFO">Element 'xpath=/html/body/div/section[4]/p[4]' contains text 'Texto Exacto'.</msg>
+<status status="PASS" starttime="20210104 11:05:43.122" endtime="20210104 11:05:43.164"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[4]/span[2]</arg>
+<arg>Texto EXACTO que quiero verificar en el elemento</arg>
+</arguments>
+<msg timestamp="20210104 11:05:43.165" level="INFO">Verifying element 'xpath=/html/body/div/section[4]/p[4]/span[2]' contains exact text 'Texto EXACTO que quiero verificar en el elemento'.</msg>
+<status status="PASS" starttime="20210104 11:05:43.165" endtime="20210104 11:05:43.251"></status>
+</kw>
+<kw name="Element Text Should Not Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/section[4]/p[4]/span[2]</arg>
+<arg>CASO 006 Verificar textos en el UI</arg>
+</arguments>
+<msg timestamp="20210104 11:05:43.252" level="INFO">Verifying element 'xpath=/html/body/div/section[4]/p[4]/span[2]' does not contain exact text 'CASO 006 Verificar textos en el UI'.</msg>
+<status status="PASS" starttime="20210104 11:05:43.252" endtime="20210104 11:05:43.290"></status>
+</kw>
+<tags>
+<tag>Caso006</tag>
+<tag>Exploratoria</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:42.925" endtime="20210104 11:05:43.291" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Cerrar Script">
+<kw name="Cerrar Navegador">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210104 11:05:43.297" endtime="20210104 11:05:45.826"></status>
+</kw>
+<status status="PASS" starttime="20210104 11:05:43.297" endtime="20210104 11:05:45.826"></status>
+</kw>
+<tags>
+<tag>Caso006</tag>
+<tag>Exploratoria</tag>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20210104 11:05:43.293" endtime="20210104 11:05:45.828" critical="yes"></status>
+</test>
+<doc>https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="PASS" starttime="20210104 11:05:25.989" endtime="20210104 11:05:45.834"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Caso001</stat>
+<stat pass="1" fail="0">Caso005</stat>
+<stat pass="3" fail="0">Caso006</stat>
+<stat pass="5" fail="0">Exploratoria</stat>
+<stat pass="5" fail="0">Funcional</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="AutomatizacionRobot">AutomatizacionRobot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

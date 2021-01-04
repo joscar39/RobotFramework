@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201218 14:41:34.331" rpa="false">
+<suite id="s1" name="Itaco" source="C:\Users\Owner\Documents\RobotFramework\Itaco.robot">
+<test id="s1-t1" name="Precondition">
+<kw name="Abrir Navegador">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201218 14:41:34.910" level="INFO">Opening browser 'chrome' to base url 'http://45.173.197.126/Itaco/web/#/login'.</msg>
+<status status="PASS" starttime="20201218 14:41:34.909" endtime="20201218 14:42:32.533"></status>
+</kw>
+<status status="PASS" starttime="20201218 14:41:34.909" endtime="20201218 14:42:32.534"></status>
+</kw>
+<kw name="Configurar Directorio">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${ScreenshotFile}</arg>
+</arguments>
+<status status="PASS" starttime="20201218 14:42:32.545" endtime="20201218 14:42:32.546"></status>
+</kw>
+<status status="PASS" starttime="20201218 14:42:32.543" endtime="20201218 14:42:32.546"></status>
+</kw>
+<tags>
+<tag>Exploratoria</tag>
+<tag>Funcional</tag>
+</tags>
+<status status="PASS" starttime="20201218 14:41:34.907" endtime="20201218 14:42:32.547" critical="yes"></status>
+</test>
+<test id="s1-t2" name="PSG-M-01-C1 Validar Datos de Entrada y Salida">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/div/div</arg>
+<arg>timeout=5s</arg>
+</arguments>
+<status status="PASS" starttime="20201218 14:42:32.554" endtime="20201218 14:42:32.636"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="login"]/div/form/div[2]/div[5]/a</arg>
+</arguments>
+<msg timestamp="20201218 14:42:32.637" level="INFO">Clicking link 'xpath=//*[@id="login"]/div/form/div[2]/div[5]/a'.</msg>
+<status status="PASS" starttime="20201218 14:42:32.637" endtime="20201218 14:42:32.878"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input</arg>
+<arg>timeout=5s</arg>
+</arguments>
+<status status="PASS" starttime="20201218 14:42:32.879" endtime="20201218 14:42:32.975"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input</arg>
+<arg>321654987-1</arg>
+</arguments>
+<msg timestamp="20201218 14:42:32.976" level="INFO">Typing text '321654987-1' into text field 'xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20201218 14:42:32.976" endtime="20201218 14:42:33.324"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201218 14:42:36.327" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201218 14:42:33.325" endtime="20201218 14:42:36.327"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=//*[@id="register"]/div/div[2]/form[1]/div/div[2]/div/div[2]/button</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20201218 14:42:36.331" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@id="register"]/div/div[2]/form[1]/div/div[2]/div/div[2]/button element.</msg>
+<msg timestamp="20201218 14:42:36.747" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20201218 14:42:36.748" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20201218 14:42:36.329" endtime="20201218 14:42:36.776"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input</arg>
+<arg>timeout=9s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201218 14:42:46.293" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ItacoScreenshots/selenium-screenshot-29.png"&gt;&lt;img src="ItacoScreenshots/selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 14:42:45.852" endtime="20201218 14:42:46.293"></status>
+</kw>
+<msg timestamp="20201218 14:42:46.298" level="FAIL">Element 'xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input' not visible after 9 seconds.</msg>
+<status status="FAIL" starttime="20201218 14:42:36.777" endtime="20201218 14:42:46.298"></status>
+</kw>
+<tags>
+<tag>Funcional</tag>
+</tags>
+<status status="FAIL" starttime="20201218 14:42:32.551" endtime="20201218 14:42:46.300" critical="yes">Element 'xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input' not visible after 9 seconds.</status>
+</test>
+<doc>https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="FAIL" starttime="20201218 14:41:34.335" endtime="20201218 14:42:46.302"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Exploratoria</stat>
+<stat pass="1" fail="1">Funcional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Itaco">Itaco</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
