@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210104 15:18:02.785" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210104 17:19:44.820" rpa="false">
 <suite id="s1" name="Itaco" source="C:\Users\Owner\Documents\RobotFramework\TestCases\Itaco.robot">
 <test id="s1-t1" name="Precondition">
 <kw name="Abrir Navegador">
@@ -9,26 +9,26 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20210104 15:18:03.481" level="INFO">Opening browser 'chrome' to base url 'http://45.173.197.126/Itaco/web/#/login'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210104 15:18:22.266" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210104 15:18:21.250" endtime="20210104 15:18:22.267"></status>
+<msg timestamp="20210104 17:19:45.819" level="INFO">Opening browser 'chrome' to base url 'http://45.173.197.126/Itaco/web/#/login'.</msg>
+<status status="PASS" starttime="20210104 17:19:45.818" endtime="20210104 17:20:08.771"></status>
 </kw>
-<msg timestamp="20210104 15:18:22.285" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=87.0.4280.88)
-</msg>
-<status status="FAIL" starttime="20210104 15:18:03.481" endtime="20210104 15:18:22.286"></status>
+<status status="PASS" starttime="20210104 17:19:45.817" endtime="20210104 17:20:08.772"></status>
 </kw>
-<status status="FAIL" starttime="20210104 15:18:03.480" endtime="20210104 15:18:22.286"></status>
+<kw name="Configurar Directorio">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${ScreenshotFile}</arg>
+</arguments>
+<status status="PASS" starttime="20210104 17:20:08.776" endtime="20210104 17:20:08.778"></status>
+</kw>
+<status status="PASS" starttime="20210104 17:20:08.774" endtime="20210104 17:20:08.778"></status>
 </kw>
 <tags>
 <tag>Exploratoria</tag>
 <tag>Funcional</tag>
 </tags>
-<status status="FAIL" starttime="20210104 15:18:03.478" endtime="20210104 15:18:22.470" critical="yes">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=87.0.4280.88)
-</status>
+<status status="PASS" starttime="20210104 17:19:45.813" endtime="20210104 17:20:08.779" critical="yes"></status>
 </test>
 <test id="s1-t2" name="PSG-M-01-C1 Registro Exitoso">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -37,55 +37,105 @@
 <arg>xpath=/html/body/div/div/div/div</arg>
 <arg>timeout=5s</arg>
 </arguments>
-<status status="PASS" starttime="20210104 15:18:22.488" endtime="20210104 15:18:22.641"></status>
+<status status="PASS" starttime="20210104 17:20:08.791" endtime="20210104 17:20:08.918"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="login"]/div/form/div[2]/div[5]/a</arg>
 </arguments>
-<msg timestamp="20210104 15:18:22.644" level="INFO">Clicking link 'xpath=//*[@id="login"]/div/form/div[2]/div[5]/a'.</msg>
+<msg timestamp="20210104 17:20:08.920" level="INFO">Clicking link 'xpath=//*[@id="login"]/div/form/div[2]/div[5]/a'.</msg>
+<status status="PASS" starttime="20210104 17:20:08.919" endtime="20210104 17:20:09.260"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input</arg>
+<arg>timeout=5s</arg>
+</arguments>
+<status status="PASS" starttime="20210104 17:20:09.262" endtime="20210104 17:20:09.396"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input</arg>
+<arg>${RUTEmpresa}</arg>
+</arguments>
+<msg timestamp="20210104 17:20:09.399" level="INFO">Typing text '32112321-00' into text field 'xpath=/html/body/div/div/div/div[2]/form[1]/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20210104 17:20:09.397" endtime="20210104 17:20:10.289"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210104 17:20:13.295" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210104 17:20:10.294" endtime="20210104 17:20:13.295"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=//*[@id="register"]/div/div[2]/form[1]/div/div[2]/div/div[2]/button</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20210104 17:20:13.305" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@id="register"]/div/div[2]/form[1]/div/div[2]/div/div[2]/button element.</msg>
+<msg timestamp="20210104 17:20:13.834" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210104 17:20:13.835" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210104 17:20:13.304" endtime="20210104 17:20:13.872"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input</arg>
+<arg>timeout=15s</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210104 15:18:23.266" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210104 15:18:22.758" endtime="20210104 15:18:23.268"></status>
+<msg timestamp="20210104 17:20:29.457" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshot/Itaco/selenium-screenshot-9.png"&gt;&lt;img src="../Screenshot/Itaco/selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210104 17:20:29.058" endtime="20210104 17:20:29.457"></status>
 </kw>
-<msg timestamp="20210104 15:18:23.278" level="FAIL">Link with locator 'xpath=//*[@id="login"]/div/form/div[2]/div[5]/a' not found.</msg>
-<status status="FAIL" starttime="20210104 15:18:22.643" endtime="20210104 15:18:23.278"></status>
+<msg timestamp="20210104 17:20:29.464" level="FAIL">Element 'xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20210104 17:20:13.874" endtime="20210104 17:20:29.464"></status>
 </kw>
 <tags>
 <tag>Caso001</tag>
 <tag>Funcional</tag>
 <tag>Parte001</tag>
 </tags>
-<status status="FAIL" starttime="20210104 15:18:22.482" endtime="20210104 15:18:23.281" critical="yes">Link with locator 'xpath=//*[@id="login"]/div/form/div[2]/div[5]/a' not found.</status>
+<status status="FAIL" starttime="20210104 17:20:08.785" endtime="20210104 17:20:29.466" critical="yes">Element 'xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input' not visible after 15 seconds.</status>
 </test>
 <test id="s1-t3" name="PSG-M-01-C1 Llenar formulario a medias, pulsar boton guardar y luego retomarlo para continuar y procesarlo">
 <kw name="Cerrar Navegador">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210104 15:18:23.309" endtime="20210104 15:18:26.625"></status>
+<status status="PASS" starttime="20210104 17:20:29.474" endtime="20210104 17:20:31.956"></status>
 </kw>
-<status status="PASS" starttime="20210104 15:18:23.308" endtime="20210104 15:18:26.625"></status>
+<status status="PASS" starttime="20210104 17:20:29.474" endtime="20210104 17:20:31.956"></status>
 </kw>
-<status status="PASS" starttime="20210104 15:18:23.303" endtime="20210104 15:18:26.626" critical="yes"></status>
+<tags>
+<tag>Caso001</tag>
+<tag>Funcional</tag>
+<tag>Parte002</tag>
+</tags>
+<status status="PASS" starttime="20210104 17:20:29.471" endtime="20210104 17:20:31.958" critical="yes"></status>
 </test>
 <doc>Toda la documentacion de los keywords esta aqui https://robotframework.org/Selenium2Library/Selenium2Library.html</doc>
-<status status="FAIL" starttime="20210104 15:18:02.790" endtime="20210104 15:18:26.632"></status>
+<status status="FAIL" starttime="20210104 17:19:44.825" endtime="20210104 17:20:31.962"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="2">Critical Tests</stat>
-<stat pass="1" fail="2">All Tests</stat>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1">Caso001</stat>
-<stat pass="0" fail="1">Exploratoria</stat>
-<stat pass="0" fail="2">Funcional</stat>
+<stat pass="1" fail="1">Caso001</stat>
+<stat pass="1" fail="0">Exploratoria</stat>
+<stat pass="2" fail="1">Funcional</stat>
 <stat pass="0" fail="1">Parte001</stat>
+<stat pass="1" fail="0">Parte002</stat>
 </tag>
 <suite>
-<stat pass="1" fail="2" id="s1" name="Itaco">Itaco</stat>
+<stat pass="2" fail="1" id="s1" name="Itaco">Itaco</stat>
 </suite>
 </statistics>
 <errors>
