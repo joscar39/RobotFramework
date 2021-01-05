@@ -52,7 +52,7 @@ PSG-M-01-C1 Registro Exitoso
     Press Keys       xpath=//*[@id="register"]/div/div[2]/form[1]/div/div[2]/div/div[2]/button        ENTER
 
     #acceso a la pantalla de datos generales
-    Wait Until Element Is Visible     xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input      timeout=20s
+    Wait Until Element Is Visible     xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input      timeout=3s
     Input Text      xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[3]/div/input       ${RazonSocial/empresa}
     Input Text      name=address     ${DireccionEmpresa}
     Input Text      xpath=//*[@id="register"]/div/div[2]/form/div[1]/div[5]/div/input       ${emailEmpresa}
